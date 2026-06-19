@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Central Coast Web Studio | Premium Websites for Local Businesses</title>
+  <meta name="description" content="Premium, fast, mobile-first websites for local businesses that want more trust and more quote requests." />
+  <meta name="theme-color" content="#07111f" />
+  <style>
+    :root{
+      --bg:#07111f;--bg2:#0b1729;--card:rgba(15,27,48,.76);--card2:#101d33;--line:rgba(226,232,240,.14);
+      --text:#f8fafc;--muted:#a8b4c7;--soft:#64748b;--cyan:#22d3ee;--blue:#60a5fa;--violet:#818cf8;--purple:#7c3aed;--lime:#a3e635;--amber:#f59e0b;--rose:#fb7185;
+      --max:1180px;--r:30px;--shadow:0 24px 80px rgba(0,0,0,.34)
+    }
+    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;background:radial-gradient(circle at 8% 0%,rgba(34,211,238,.22),transparent 30rem),radial-gradient(circle at 85% 6%,rgba(124,58,237,.20),transparent 31rem),radial-gradient(circle at 65% 44%,rgba(163,230,53,.09),transparent 28rem),linear-gradient(180deg,#07111f,#06101d);color:var(--text);overflow-x:hidden}
+    body:before{content:"";position:fixed;inset:0;pointer-events:none;z-index:-1;opacity:.28;background-image:linear-gradient(rgba(255,255,255,.035) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.035) 1px,transparent 1px);background-size:64px 64px;mask-image:linear-gradient(to bottom,black,transparent 80%)}
+    a{text-decoration:none;color:inherit}button,input,textarea,select{font:inherit}button{cursor:pointer;color:inherit}.container{width:min(var(--max),calc(100vw - 34px));margin:0 auto}
+    .nav{position:sticky;top:12px;z-index:50;width:min(var(--max),calc(100vw - 24px));margin:12px auto 0;padding:10px;border:1px solid var(--line);border-radius:999px;background:rgba(7,17,31,.78);backdrop-filter:blur(18px);display:flex;align-items:center;gap:12px;box-shadow:0 18px 55px rgba(0,0,0,.25)}
+    .brand{display:flex;align-items:center;gap:10px;font-weight:950;min-width:max-content}.logo{width:44px;height:44px;border-radius:16px;background:linear-gradient(135deg,var(--cyan),var(--violet),var(--lime));display:grid;place-items:center;color:#06111f;font-weight:1000;box-shadow:0 14px 36px rgba(34,211,238,.18)}.brand small{display:block;color:var(--muted);font-size:12px;margin-top:2px}
+    .links{margin-left:auto;display:flex;gap:3px}.links a{padding:12px 13px;border-radius:999px;color:var(--muted);font-size:14px;font-weight:850}.links a:hover{background:rgba(255,255,255,.08);color:var(--text)}
+    .navbtn,.btn{min-height:52px;border:0;border-radius:999px;display:inline-flex;align-items:center;justify-content:center;font-weight:950;padding:14px 18px;transition:.18s}.navbtn,.primary{color:#06111f;background:linear-gradient(135deg,var(--cyan),var(--violet) 55%,var(--lime));box-shadow:0 18px 48px rgba(34,211,238,.18)}.ghost{background:rgba(255,255,255,.08);border:1px solid var(--line);color:var(--text)}.btn:hover,.navbtn:hover{transform:translateY(-2px);filter:brightness(1.06)}.menu{display:none;margin-left:auto;width:46px;height:46px;border:0;border-radius:999px;background:rgba(255,255,255,.08)}.menu span{display:block;height:2px;background:#fff;margin:5px 12px;border-radius:9px}
+    .hero{position:relative;padding:95px 0 56px}.hero-grid{display:grid;grid-template-columns:1.02fr .98fr;gap:58px;align-items:center}.eyebrow{display:inline-flex;align-items:center;gap:10px;color:var(--lime);font-size:12px;font-weight:950;letter-spacing:.12em;text-transform:uppercase}.eyebrow:before{content:"";width:10px;height:10px;border-radius:50%;background:linear-gradient(135deg,var(--cyan),var(--lime));box-shadow:0 0 0 8px rgba(163,230,53,.1)}
+    h1,h2,h3,p{margin-top:0}h1{font-size:clamp(50px,7.4vw,96px);line-height:.9;letter-spacing:-.085em;margin:18px 0 24px}h2{font-size:clamp(34px,5vw,64px);line-height:.96;letter-spacing:-.07em;margin:14px 0 16px}h3{letter-spacing:-.045em}.lead,.section-head p,.copy p{font-size:18px;color:var(--muted);line-height:1.68;max-width:720px}.hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin:30px 0}.proof{display:grid;grid-template-columns:repeat(3,1fr);overflow:hidden;border:1px solid var(--line);border-radius:26px;background:rgba(15,27,48,.54)}.proof div{padding:17px;border-right:1px solid var(--line)}.proof div:last-child{border-right:0}.proof strong{display:block;font-size:18px}.proof span{display:block;color:var(--muted);font-size:12px;margin-top:5px}
+    .showcase{position:relative;min-height:590px}.browser{position:relative;overflow:hidden;border:1px solid var(--line);border-radius:34px;background:linear-gradient(180deg,rgba(255,255,255,.10),rgba(255,255,255,.02)),rgba(15,27,48,.82);padding:16px;box-shadow:var(--shadow)}.browser:after{content:"";position:absolute;inset:-45%;background:conic-gradient(from 180deg,transparent,rgba(34,211,238,.22),transparent,rgba(124,58,237,.22),transparent,rgba(163,230,53,.16),transparent);animation:spin 16s linear infinite;opacity:.65}.browser>*{position:relative;z-index:1}.topbar{display:flex;justify-content:space-between;gap:12px;margin-bottom:14px}.dots{display:flex;gap:7px}.dots i{width:11px;height:11px;border-radius:50%;background:rgba(255,255,255,.34)}.url{flex:1;text-align:center;background:rgba(2,6,23,.36);border:1px solid rgba(255,255,255,.1);border-radius:999px;padding:8px;color:var(--muted);font-size:12px;font-weight:800}
+    .screen{background:#f8fafc;color:#0f172a;border-radius:26px;padding:22px;min-height:510px}.screen-nav{display:flex;justify-content:flex-end;gap:9px;margin-bottom:54px}.screen-nav span{width:68px;height:13px;border-radius:999px;background:#cbd5e1}.screen-main{display:grid;grid-template-columns:1fr .92fr;gap:24px;align-items:center}.screen small{color:#4f46e5;font-weight:950;font-size:11px;letter-spacing:.12em}.screen h3{font-size:46px;line-height:.95;letter-spacing:-.07em;margin:12px 0}.screen p{color:#475569;font-weight:650;line-height:1.55}.art{height:238px;border-radius:32px;background:linear-gradient(135deg,#07111f,#15233a);position:relative;overflow:hidden}.art:before{content:"";position:absolute;inset:24px;border:1px solid rgba(255,255,255,.14);border-radius:25px}.bubble{position:absolute;border-radius:50%}.b1{width:130px;height:130px;background:var(--cyan);left:36px;top:42px}.b2{width:96px;height:96px;background:var(--lime);right:42px;bottom:40px}.b3{width:72px;height:72px;background:var(--violet);right:112px;top:42px}.metrics{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:54px}.metrics div{padding:18px;border-radius:20px;background:rgba(15,23,42,.08)}.metrics b{font-size:28px;display:block}.metrics span{color:#64748b;font-size:12px;font-weight:900}
+    .phone{position:absolute;right:-4px;bottom:0;width:190px;padding:12px;border-radius:36px;background:#020617;border:1px solid rgba(255,255,255,.16);box-shadow:0 28px 70px rgba(0,0,0,.4)}.phone-in{min-height:330px;border-radius:28px;padding:40px 15px 15px;background:radial-gradient(circle at 70% 18%,rgba(163,230,53,.34),transparent 42%),linear-gradient(180deg,#13233d,#081120)}.chip{display:inline-flex;padding:7px 10px;border-radius:999px;background:var(--lime);color:#06111f;font-size:11px;font-weight:950;margin-bottom:28px}.phone h4{font-size:26px;line-height:1;letter-spacing:-.055em;margin:0 0 10px}.phone p{color:var(--muted);font-size:13px;line-height:1.45}.lines{display:grid;gap:9px;margin-top:34px}.lines span{height:40px;border-radius:16px;background:rgba(255,255,255,.09);border:1px solid rgba(255,255,255,.1)}
+    .floating{position:absolute;padding:16px;border-radius:21px;background:rgba(15,27,48,.9);border:1px solid var(--line);box-shadow:var(--shadow);backdrop-filter:blur(12px);max-width:235px}.floating b,.floating span{display:block}.floating span{color:var(--muted);font-size:13px;margin-top:5px;line-height:1.45}.f1{left:-20px;top:70px}.f2{left:18px;bottom:92px}
+    .strip{padding:22px;border:1px solid var(--line);border-radius:28px;background:rgba(15,27,48,.52);display:flex;align-items:center;justify-content:space-between;gap:18px;flex-wrap:wrap;color:var(--muted)}.strip b{color:var(--text)}
+    section{padding:94px 0}.section-head{margin-bottom:42px}.center{text-align:center}.center p{margin-left:auto;margin-right:auto}.grid4{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}.card,.case,.price,.audit,.estimator,.contact,.process,.script{border:1px solid var(--line);border-radius:var(--r);background:linear-gradient(180deg,rgba(255,255,255,.065),rgba(255,255,255,.018)),var(--card);box-shadow:0 18px 60px rgba(0,0,0,.2)}
+    .case{overflow:hidden;transition:.18s}.case:hover{transform:translateY(-5px);border-color:rgba(34,211,238,.35)}.case-img{height:230px;background:radial-gradient(circle at 78% 22%,rgba(34,211,238,.35),transparent 135px),radial-gradient(circle at 24% 78%,rgba(163,230,53,.22),transparent 150px),#111e33;position:relative}.case-img:before{content:"";position:absolute;inset:28px;border-radius:28px;border:1px solid rgba(255,255,255,.15);background:linear-gradient(135deg,rgba(255,255,255,.10),rgba(255,255,255,.02))}.case-img:after{content:"";position:absolute;left:52px;bottom:48px;width:44%;height:52px;border-radius:18px;background:rgba(255,255,255,.82);box-shadow:170px -65px 0 -8px rgba(34,211,238,.9),245px 20px 0 -13px rgba(163,230,53,.9)}.case-body,.card,.price,.process{padding:24px}.tag{display:inline-flex;color:var(--lime);font-size:11px;letter-spacing:.1em;text-transform:uppercase;font-weight:950;border:1px solid rgba(163,230,53,.18);background:rgba(163,230,53,.07);padding:7px 9px;border-radius:999px}.case h3{font-size:25px;margin:15px 0 10px}.case p,.card p,.price p,.process p,.script p{color:var(--muted);line-height:1.62}.textbtn{border:0;background:transparent;color:var(--cyan);padding:0;font-weight:950}
+    .split{display:grid;grid-template-columns:.88fr 1.12fr;gap:44px;align-items:start}.sticky{position:sticky;top:115px}.service-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}.icon{width:54px;height:54px;border-radius:18px;background:linear-gradient(135deg,var(--cyan),var(--lime));display:grid;place-items:center;color:#06111f;font-weight:950;margin-bottom:20px}.card h3{font-size:25px;margin-bottom:9px}
+    .panel{padding:34px;background:radial-gradient(circle at 12% 10%,rgba(34,211,238,.16),transparent 24rem),radial-gradient(circle at 88% 80%,rgba(245,158,11,.12),transparent 22rem),var(--card);display:grid;grid-template-columns:.95fr 1.05fr;gap:30px;align-items:center}.panel-stat{display:grid;gap:12px}.panel-stat div{padding:18px;border:1px solid var(--line);border-radius:20px;background:rgba(2,6,23,.22)}.panel-stat strong{display:block;font-size:20px;margin-bottom:4px}.panel-stat span{color:var(--muted)}
+    .auditwrap{display:grid;grid-template-columns:.92fr 1.08fr;gap:34px;align-items:center}.audit{padding:28px}.score{display:flex;align-items:end;justify-content:space-between;gap:18px;margin-bottom:20px}.score span{color:var(--muted);font-weight:800}.score strong{font-size:60px;line-height:.9;letter-spacing:-.07em;background:linear-gradient(135deg,var(--cyan),var(--violet),var(--lime));-webkit-background-clip:text;background-clip:text;color:transparent}.checks{display:grid;gap:10px}.checks label{display:flex;align-items:center;gap:11px;padding:14px;border-radius:18px;border:1px solid var(--line);background:rgba(255,255,255,.06);font-weight:800}.checks input{width:18px;height:18px;accent-color:var(--cyan)}.result{margin-top:16px;padding:16px;border-radius:18px;background:rgba(34,211,238,.09);border:1px solid rgba(34,211,238,.18);color:var(--muted);line-height:1.55}
+    .process span{color:var(--cyan);font-size:13px;font-weight:950;letter-spacing:.13em}.process h3{font-size:26px;margin:46px 0 10px}
+    .price.featured{border-color:rgba(163,230,53,.42);background:radial-gradient(circle at top right,rgba(163,230,53,.16),transparent 20rem),var(--card);transform:translateY(-10px)}.price h3{font-size:30px;margin:17px 0 10px}.money{font-size:44px;font-weight:950;letter-spacing:-.07em;margin:16px 0 10px}.price ul{padding:0;margin:22px 0;list-style:none;display:grid;gap:11px}.price li{color:var(--muted);display:flex;gap:10px}.price li:before{content:"✓";color:var(--lime);font-weight:950}.full{width:100%}
+    .estimator{margin-top:22px;padding:28px;display:grid;grid-template-columns:.82fr 1.18fr;gap:28px;align-items:center}.estimator h3{font-size:34px;margin:10px 0}.formgrid{display:grid;grid-template-columns:1fr 1fr auto;gap:16px;align-items:end}label{display:grid;gap:8px;font-size:14px;font-weight:850}input,select,textarea{width:100%;border:1px solid var(--line);background:rgba(2,6,23,.42);color:var(--text);border-radius:16px;padding:14px 15px;outline:0}input:focus,select:focus,textarea:focus{border-color:rgba(34,211,238,.7);box-shadow:0 0 0 4px rgba(34,211,238,.1)}input[type=range]{accent-color:var(--cyan)}label small{color:var(--muted)}.estimatebox{min-width:200px;padding:18px;border-radius:20px;background:rgba(34,211,238,.09);border:1px solid rgba(34,211,238,.18)}.estimatebox span,.estimatebox small{display:block;color:var(--muted)}.estimatebox strong{display:block;font-size:36px;letter-spacing:-.06em}
+    .script{padding:32px;display:grid;grid-template-columns:.78fr 1.22fr;gap:26px;align-items:center}.quote{padding:24px;border:1px solid var(--line);border-radius:24px;background:rgba(2,6,23,.25)}.copy{border:1px solid var(--line);background:rgba(255,255,255,.08);border-radius:999px;padding:12px 16px;font-weight:950}
+    .faq{max-width:880px;margin:0 auto;display:grid;gap:12px}.faq button{width:100%;text-align:left;padding:22px;border:1px solid var(--line);border-radius:24px;background:var(--card)}.faq span{display:flex;justify-content:space-between;font-size:19px;font-weight:950;letter-spacing:-.035em}.faq span:after{content:"+";color:var(--lime)}.faq button.active span:after{content:"–"}.faq p{max-height:0;overflow:hidden;margin:0;color:var(--muted);line-height:1.6;transition:.22s}.faq button.active p{max-height:220px;margin-top:12px}
+    .contact{padding:34px;display:grid;grid-template-columns:.9fr 1.1fr;gap:38px;align-items:center;background:radial-gradient(circle at top left,rgba(34,211,238,.18),transparent 25rem),radial-gradient(circle at bottom right,rgba(163,230,53,.13),transparent 25rem),var(--card)}.contact form{display:grid;gap:13px;padding:20px;border:1px solid var(--line);border-radius:24px;background:rgba(2,6,23,.26)}textarea{resize:vertical}.contactlinks{display:grid;gap:10px;margin-top:22px}.contactlinks a{font-weight:950;width:max-content;border-bottom:1px solid rgba(163,230,53,.4)}
+    footer{padding:36px 0 60px;display:flex;align-items:center;justify-content:space-between;gap:18px;color:var(--muted)}footer .links2{display:flex;gap:16px;flex-wrap:wrap}footer a{font-weight:850}
+    .bottomnav{display:none}.reveal{opacity:0;transform:translateY(18px);transition:.7s}.reveal.show{opacity:1;transform:translateY(0)}@keyframes spin{to{transform:rotate(360deg)}}
+    @media(max-width:1080px){.hero-grid,.split,.panel,.auditwrap,.estimator,.script,.contact{grid-template-columns:1fr}.sticky{position:static}.grid4{grid-template-columns:repeat(2,1fr)}.grid3{grid-template-columns:1fr}.price.featured{transform:none}.formgrid{grid-template-columns:1fr}.showcase{min-height:auto}.phone,.floating{position:relative;right:auto;left:auto;bottom:auto;top:auto;margin-top:14px}.phone{max-width:230px;margin-left:auto}}
+    @media(max-width:760px){.container,.nav{width:calc(100vw - 22px)}.nav{border-radius:26px;flex-wrap:wrap;align-items:flex-start}.menu{display:block}.links{display:none;width:100%;flex-direction:column;margin-left:0}.links.open{display:flex}.links a{padding:13px}.navbtn{display:none}.hero{padding:64px 0 36px}h1{font-size:clamp(46px,15vw,70px)}.lead,.section-head p,.copy p{font-size:16px}.hero-actions{display:grid;grid-template-columns:1fr}.proof,.screen-main,.metrics,.grid4,.service-grid{grid-template-columns:1fr}.proof div{border-right:0;border-bottom:1px solid var(--line)}.proof div:last-child{border-bottom:0}.screen-nav span{width:48px}.screen h3{font-size:36px}.art{height:190px}.strip{justify-content:flex-start}section{padding:70px 0}.case-img{height:200px}.panel,.audit,.estimator,.script,.contact{padding:22px}.score strong{font-size:48px}.bottomnav{position:fixed;left:50%;bottom:10px;transform:translateX(-50%);z-index:80;width:min(500px,calc(100vw - 20px));display:grid;grid-template-columns:repeat(5,1fr);gap:4px;padding:8px;border:1px solid var(--line);border-radius:25px;background:rgba(7,17,31,.86);backdrop-filter:blur(18px);box-shadow:0 16px 50px rgba(0,0,0,.35)}.bottomnav a{min-height:43px;display:grid;place-items:center;border-radius:17px;color:var(--muted);font-size:11px;font-weight:900}.bottomnav a:last-child{color:#06111f;background:linear-gradient(135deg,var(--cyan),var(--lime))}body{padding-bottom:82px}footer{flex-direction:column;align-items:flex-start}}
+  </style>
+</head>
+<body>
+  <nav class="nav">
+    <a href="#top" class="brand"><div class="logo">CC</div><div>Central Coast<small>Web Studio</small></div></a>
+    <button class="menu" aria-label="Open menu" id="menu"><span></span><span></span><span></span></button>
+    <div class="links" id="links"><a href="#work">Work</a><a href="#services">Services</a><a href="#audit">Audit</a><a href="#pricing">Pricing</a><a href="#contact">Contact</a></div>
+    <a href="#contact" class="navbtn">Free mockup</a>
+  </nav>
+
+  <main id="top">
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="reveal">
+          <div class="eyebrow">Premium local web design</div>
+          <h1>Websites that make small businesses look impossible to ignore.</h1>
+          <p class="lead">Clean design, stronger copy, fast pages, and clear calls-to-action for local businesses that want more trust, more leads, and a better first impression on every device.</p>
+          <div class="hero-actions"><a class="btn primary" href="#contact">Get a free homepage mockup</a><a class="btn ghost" href="#work">View concept work</a></div>
+          <div class="proof"><div><strong>Strategy</strong><span>Not just pretty pages</span></div><div><strong>Responsive</strong><span>Phone, tablet, desktop</span></div><div><strong>Fast launch</strong><span>Simple, focused process</span></div></div>
+        </div>
+        <div class="showcase reveal">
+          <div class="browser">
+            <div class="topbar"><div class="dots"><i></i><i></i><i></i></div><div class="url">centralcoastwebstudio.com</div></div>
+            <div class="screen">
+              <div class="screen-nav"><span></span><span></span><span></span></div>
+              <div class="screen-main">
+                <div><small>LOCAL SERVICE WEBSITE</small><h3>Turn visitors into quote requests.</h3><p>Professional design, local SEO basics, and a clear contact flow.</p></div>
+                <div class="art"><div class="bubble b1"></div><div class="bubble b2"></div><div class="bubble b3"></div></div>
+              </div>
+              <div class="metrics"><div><b>98</b><span>Speed</span></div><div><b>3.2x</b><span>Clearer CTA</span></div><div><b>24/7</b><span>Online trust</span></div></div>
+            </div>
+          </div>
+          <div class="phone"><div class="phone-in"><span class="chip">Get quote</span><h4>Book more jobs.</h4><p>Mobile page that looks legit instantly.</p><div class="lines"><span></span><span></span><span></span></div></div></div>
+          <div class="floating f1"><b>Lead form ready</b><span>Name, phone, service, and message.</span></div>
+          <div class="floating f2"><b>Local SEO setup</b><span>Service area + search-friendly structure.</span></div>
+        </div>
+      </div>
+    </section>
+
+    <div class="container strip reveal"><span>Best fit for</span><b>Contractors</b><b>Landscapers</b><b>Detailers</b><b>Pressure washers</b><b>Trainers</b><b>Local startups</b></div>
+
+    <section class="container" id="work">
+      <div class="section-head reveal"><div class="eyebrow">Concept portfolio</div><h2>Demo sites that sell the client before the meeting starts.</h2><p>Instead of saying “I can build websites,” show a business owner a polished version of what their site could become.</p></div>
+      <div class="grid4">
+        <article class="case reveal"><div class="case-img"></div><div class="case-body"><span class="tag">Landscaping</span><h3>Greenline Outdoor Co.</h3><p>High-trust service page with before/after proof, service areas, reviews, and clear quote requests.</p><button class="textbtn" data-case="Landscaping">Open case study</button></div></article>
+        <article class="case reveal"><div class="case-img"></div><div class="case-body"><span class="tag">Detailing</span><h3>Coastline Detail Lab</h3><p>Colorful premium design with packages, upgrades, photo proof, and mobile booking buttons.</p><button class="textbtn" data-case="Detailing">Open case study</button></div></article>
+        <article class="case reveal"><div class="case-img"></div><div class="case-body"><span class="tag">Contractor</span><h3>Summit Build Group</h3><p>Clean contractor site built around licensing, project photos, testimonials, and fast estimate requests.</p><button class="textbtn" data-case="Contractor">Open case study</button></div></article>
+        <article class="case reveal"><div class="case-img"></div><div class="case-body"><span class="tag">Fitness</span><h3>Peak Form Training</h3><p>Modern landing page for local trainers with programs, transformations, and consultation booking.</p><button class="textbtn" data-case="Fitness">Open case study</button></div></article>
+      </div>
+    </section>
+
+    <section id="services">
+      <div class="container split">
+        <div class="section-head sticky reveal"><div class="eyebrow">What we build</div><h2>A complete online first impression, not just a page.</h2><p>The site should look impressive, but it also needs structure: trust, clarity, speed, local search basics, and a smooth way to contact the business.</p><a class="btn primary" href="#contact">Start with a mockup</a></div>
+        <div class="service-grid">
+          <article class="card reveal"><div class="icon">01</div><h3>Brand polish</h3><p>Color, layout, spacing, typography, and visuals that make the business feel more established.</p></article>
+          <article class="card reveal"><div class="icon">02</div><h3>Conversion copy</h3><p>Headlines and sections that explain what the business does, why it’s trusted, and how to take action.</p></article>
+          <article class="card reveal"><div class="icon">03</div><h3>Responsive build</h3><p>Designed for phones, tablets, and desktop so it works wherever customers find it.</p></article>
+          <article class="card reveal"><div class="icon">04</div><h3>Local SEO basics</h3><p>Clean titles, location/service keywords, image labels, FAQ content, and searchable structure.</p></article>
+          <article class="card reveal"><div class="icon">05</div><h3>Lead flow</h3><p>Calls, email links, quote forms, and buttons placed where customers naturally decide to contact you.</p></article>
+          <article class="card reveal"><div class="icon">06</div><h3>Launch support</h3><p>Domain connection, hosting setup, form testing, and a clean handoff after launch.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="container">
+      <div class="panel card reveal">
+        <div class="copy"><div class="eyebrow">Why businesses care</div><h2>A better website changes how people judge the business.</h2><p>Customers make quick decisions. A professional website helps a business look organized, trustworthy, and easier to hire.</p></div>
+        <div class="panel-stat"><div><strong>Clear offer</strong><span>Visitors understand the business faster.</span></div><div><strong>Trust proof</strong><span>Reviews, photos, and service areas are easy to find.</span></div><div><strong>Action path</strong><span>Every section points toward a call, email, or quote request.</span></div></div>
+      </div>
+    </section>
+
+    <section class="container" id="audit">
+      <div class="auditwrap">
+        <div class="section-head reveal"><div class="eyebrow">Interactive audit</div><h2>Show clients what their current site is missing.</h2><p>Use this in a sales conversation. Check off problems you notice, then explain how the new website fixes them.</p></div>
+        <div class="audit reveal"><div class="score"><span>Website readiness</span><strong id="score">42%</strong></div><div class="checks" id="checks"><label><input type="checkbox" checked value="18">Outdated design</label><label><input type="checkbox" checked value="14">Weak mobile layout</label><label><input type="checkbox" value="12">No clear quote button</label><label><input type="checkbox" value="10">Missing reviews/photos</label><label><input type="checkbox" value="8">Slow or confusing pages</label></div><div class="result" id="result">This business likely needs a cleaner, mobile-first redesign with stronger calls-to-action.</div></div>
+      </div>
+    </section>
+
+    <section class="container">
+      <div class="section-head center reveal"><div class="eyebrow">Simple process</div><h2>Make it easy for busy business owners to say yes.</h2></div>
+      <div class="grid4">
+        <article class="process reveal"><span>01</span><h3>Find the gap</h3><p>Look at their current site, Google profile, photos, reviews, and competitors.</p></article>
+        <article class="process reveal"><span>02</span><h3>Build a mockup</h3><p>Create a polished homepage preview so they can see the upgrade before committing.</p></article>
+        <article class="process reveal"><span>03</span><h3>Collect details</h3><p>Get services, photos, service areas, reviews, phone number, and business goals.</p></article>
+        <article class="process reveal"><span>04</span><h3>Launch cleanly</h3><p>Publish, connect the domain, test contact links, and offer simple monthly updates.</p></article>
+      </div>
+    </section>
+
+    <section class="container" id="pricing">
+      <div class="section-head center reveal"><div class="eyebrow">Pricing</div><h2>Starter packages that still feel professional.</h2><p>Use simple pricing while you build proof. Do not overcomplicate the first few clients.</p></div>
+      <div class="grid3">
+        <article class="price reveal"><span class="tag">Starter</span><h3>Landing page</h3><div class="money">$350–$600</div><p>Great for a small business that needs a legit online presence quickly.</p><ul><li>One polished page</li><li>Responsive layout</li><li>CTA buttons</li><li>Basic SEO setup</li></ul><a class="btn ghost full" href="#contact">Ask about Starter</a></article>
+        <article class="price featured reveal"><span class="tag">Most impressive</span><h3>Professional site</h3><div class="money">$750–$1,200</div><p>Best for businesses that want a full upgrade and stronger trust online.</p><ul><li>3–5 page structure</li><li>Services + FAQ sections</li><li>Portfolio/reviews layout</li><li>Quote form flow</li><li>Launch support</li></ul><a class="btn primary full" href="#contact">Get free mockup</a></article>
+        <article class="price reveal"><span class="tag">Monthly</span><h3>Care plan</h3><div class="money">$50–$100/mo</div><p>Simple updates and support after the site launches.</p><ul><li>Text changes</li><li>Photo swaps</li><li>Basic support</li><li>Performance checkups</li></ul><a class="btn ghost full" href="#contact">Ask about Care</a></article>
+      </div>
+      <div class="estimator reveal"><div><div class="eyebrow">Quote helper</div><h3>Project estimate slider</h3><p class="lead">Use this to talk through pricing without sounding random.</p></div><form class="formgrid"><label>Number of pages<input id="pages" type="range" min="1" max="6" value="4"><small id="pagesText">4 pages</small></label><label>Design level<select id="level"><option value="0">Clean starter</option><option value="180" selected>Professional</option><option value="340">Premium polish</option></select></label><div class="estimatebox"><span>Estimated build</span><strong id="estimate">$880</strong><small>Depends on content and complexity.</small></div></form></div>
+    </section>
+
+    <section class="container">
+      <div class="script reveal"><div><div class="eyebrow">Sales kit</div><h2>What to say when you show this to a business.</h2></div><div class="quote"><p>“I’m local, and I build clean websites for service businesses. I noticed your current site could make your business look more professional and get more quote requests. I made a free mockup so you can see what an upgraded version could look like.”</p><button class="copy" id="copy">Copy script</button></div></div>
+    </section>
+
+    <section class="container">
+      <div class="section-head center reveal"><div class="eyebrow">FAQ</div><h2>Answer objections before they stop the deal.</h2></div>
+      <div class="faq">
+        <button class="reveal"><span>Why should a small business pay for a better website?</span><p>Because the website is often the first impression. A clean site builds trust, explains services, shows proof, and makes contacting the business easy.</p></button>
+        <button class="reveal"><span>What do you need from the business?</span><p>Business name, logo if they have one, services, service areas, phone/email, photos, reviews, and any websites they like.</p></button>
+        <button class="reveal"><span>Can this replace an old website?</span><p>Yes. Redesigning outdated websites is one of the easiest offers because the improvement is obvious.</p></button>
+        <button class="reveal"><span>How does the contact form work?</span><p>This version opens an email draft. For a real client, connect Formspree, Netlify Forms, or a custom backend.</p></button>
+      </div>
+    </section>
+
+    <section class="container" id="contact">
+      <div class="contact reveal">
+        <div class="copy"><div class="eyebrow">Get started</div><h2>Want your business to look more professional online?</h2><p>Send the business name, service type, current website if there is one, and what needs to improve. We’ll create a free homepage mockup so you can see the upgrade first.</p><div class="contactlinks"><a href="mailto:hello@centralcoastwebstudio.com">hello@centralcoastwebstudio.com</a><a href="tel:+18055550124">(805) 555-0124</a></div></div>
+        <form id="contactForm"><input id="name" placeholder="Your name" required><input id="business" placeholder="Business name" required><input id="website" placeholder="Current website, if any"><textarea id="message" rows="5" placeholder="What should improve?" required></textarea><button class="btn primary full" type="submit">Create email request</button><p style="font-size:13px;color:var(--soft);margin:0">Replace the email and phone before using with real clients.</p></form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="container"><a href="#top" class="brand"><div class="logo">CC</div><div>Central Coast<small>Web Studio</small></div></a><p>Clean, colorful websites for local service businesses.</p><div class="links2"><a href="#work">Work</a><a href="#services">Services</a><a href="#pricing">Pricing</a><a href="#contact">Contact</a></div></footer>
+  <nav class="bottomnav"><a href="#top">Home</a><a href="#work">Work</a><a href="#services">Services</a><a href="#pricing">Price</a><a href="#contact">Contact</a></nav>
+
+  <script>
+    const menu=document.getElementById('menu'),links=document.getElementById('links');menu?.addEventListener('click',()=>links.classList.toggle('open'));links?.querySelectorAll('a').forEach(a=>a.onclick=()=>links.classList.remove('open'));
+    const obs=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('show');obs.unobserve(e.target)}}),{threshold:.12});document.querySelectorAll('.reveal').forEach(x=>obs.observe(x));
+    const checks=document.getElementById('checks'),score=document.getElementById('score'),result=document.getElementById('result');function audit(){const pen=[...checks.querySelectorAll('input:checked')].reduce((s,i)=>s+Number(i.value),0),val=Math.max(18,100-pen);score.textContent=val+'%';result.textContent=val<45?'This business likely needs a full redesign. The current site may be hurting trust, mobile experience, and quote requests.':val<70?'This business has a decent start, but a cleaner layout, stronger CTA, and better proof could make it much more effective.':'This business is close. A focused refresh could improve polish, conversion, and local search structure.'}checks?.querySelectorAll('input').forEach(i=>i.addEventListener('change',audit));audit();
+    const pages=document.getElementById('pages'),level=document.getElementById('level'),pagesText=document.getElementById('pagesText'),estimate=document.getElementById('estimate');function est(){const p=Number(pages.value),v=Number(level.value),total=300+p*100+v;pagesText.textContent=p+(p===1?' page':' pages');estimate.textContent='$'+total}pages?.addEventListener('input',est);level?.addEventListener('change',est);est();
+    document.querySelectorAll('.faq button').forEach(b=>b.onclick=()=>{const on=b.classList.contains('active');document.querySelectorAll('.faq button').forEach(x=>x.classList.remove('active'));if(!on)b.classList.add('active')});
+    document.querySelectorAll('[data-case]').forEach(b=>b.onclick=()=>alert(b.dataset.case+' case study: use this as a demo for that type of local business. Add real photos, reviews, services, and contact details for a client.'));
+    document.getElementById('copy')?.addEventListener('click',async()=>{const t='I’m local, and I build clean websites for service businesses. I noticed your current site could make your business look more professional and get more quote requests. I made a free mockup so you can see what an upgraded version could look like.';try{await navigator.clipboard.writeText(t);copy.textContent='Copied';setTimeout(()=>copy.textContent='Copy script',1300)}catch{copy.textContent='Copy manually'}});
+    document.getElementById('contactForm')?.addEventListener('submit',e=>{e.preventDefault();const subject=encodeURIComponent('Website mockup request for '+business.value);const body=encodeURIComponent('Name: '+name.value+'\\nBusiness: '+business.value+'\\nCurrent website: '+(website.value||'No website provided')+'\\n\\nWhat should improve:\\n'+message.value);location.href='mailto:hello@centralcoastwebstudio.com?subject='+subject+'&body='+body});
+  </script>
+</body>
+</html>
